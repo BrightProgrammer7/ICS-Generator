@@ -1,8 +1,8 @@
 // import ICAL from "ical.js";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // const ICSGenerator = ({ eventDetails }) => {
-const ICSGenerator = ({ icsData }) => {
+  const ICSGenerator = ({ icsData }) => {
   const generateICSFile = () => {
     // const jcalData = {
     //   "@context": "http://www.w3.org/ns/icalendar",
@@ -20,7 +20,7 @@ const ICSGenerator = ({ icsData }) => {
     // const icalString = JSON.stringify(eventDetails);
     // const blob = new Blob([jcalString], {
     // const blob = new Blob([eventDetails], {
-    const blob = new Blob([icsData], {
+    const blob = new Blob([eventDetails], {
       type: "text/calendar;charset=utf-8",
     });
 
@@ -29,13 +29,13 @@ const ICSGenerator = ({ icsData }) => {
     link.href = window.URL.createObjectURL(blob);
     link.download = "event.ics";
     link.click();
-    // console.log(icalString);
+    console.log(icalString);
     console.log(blob);
   };
 
   return (
     <div>
-      <h2>Generated ICS File</h2>
+        <h2>Generated ICS File</h2>
       {/* <pre>{eventDetails}</pre> */}
       <button onClick={generateICSFile}>Download ICS File</button>
     </div>
@@ -49,6 +49,5 @@ ICSGenerator.propTypes = {
     endDate: PropTypes.instanceOf(Date).isRequired,
     location: PropTypes.string,
   }).isRequired,
-  icsData: PropTypes.string.isRequired,
 };
 export default ICSGenerator;

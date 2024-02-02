@@ -100,8 +100,7 @@ END:VCALENDAR`;
       </p> */}
       <div>
         <EventForm generateICS={generateICS} />
-        {/* {generatedICS && <ICSGenerator eventDetails={generatedICS} />} */}
-        {generatedICS && <ICSGenerator icsData={generatedICS} />}
+        {generatedICS && <ICSGenerator eventDetails={generatedICS} />}
       </div>
     </>
   );

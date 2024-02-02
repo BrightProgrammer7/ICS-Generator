@@ -49,6 +49,5 @@ ICSGenerator.propTypes = {
     endDate: PropTypes.instanceOf(Date).isRequired,
     location: PropTypes.string,
   }).isRequired,
-  icsData: PropTypes.string.isRequired,
 };
 export default ICSGenerator;

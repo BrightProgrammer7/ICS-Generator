@@ -29,7 +29,7 @@ const ICSGenerator = ({ icsData }) => {
     link.href = window.URL.createObjectURL(blob);
     link.download = "event.ics";
     link.click();
-    // console.log(icalString);
+    console.log(icalString);
     console.log(blob);
   };
 
@@ -49,6 +49,5 @@ ICSGenerator.propTypes = {
     endDate: PropTypes.instanceOf(Date).isRequired,
     location: PropTypes.string,
   }).isRequired,
-  icsData: PropTypes.string.isRequired,
 };
 export default ICSGenerator;
